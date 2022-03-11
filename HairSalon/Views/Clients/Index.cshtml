@@ -15,7 +15,7 @@
 
 @foreach (Client client in Model)
 {
-  <p>@Html.ActionLink($"{client.Name}","Details", new {id = client.ClientId}) - @client.Stylist.Name</p>
+  <p>@Html.ActionLink($"{client.Name}","Details", new {id = client.ClientId}), Hairtyle: @client.Hairstyle - Stylist: @client.Stylist.Name</p>
 }
 
 <p>@Html.ActionLink("Add new Client", "Create")</p>
