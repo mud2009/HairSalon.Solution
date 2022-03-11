@@ -25,11 +25,13 @@ This site allows the owner of a hair salon to access information on their stylis
 * Import database `will_greenberg.sql` in mySQLWorkbench, which is accessible [here](https://dev.mysql.com/downloads/workbench/).
 * Once the database is imported, add an `appsettings.json` file to the directory `HairSalon`.
 * Add the following code to the `appsettings.json` file, with your password in the appropriate location
-  ``{
+  ```
+  {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=will_greenberg;uid=root;pwd=epicodus;"
+        "DefaultConnection": "Server=localhost;Port=3306;database=will_greenberg;uid=root;pwd=[YOUR-PASSWORD];"
     }
-  }``
+  }
+  ```
 * To run the application, run `dotnet run --project HairSalon/`.
 * Navigate to `http://localhost:5000` in your browser.
 
