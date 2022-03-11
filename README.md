@@ -24,7 +24,7 @@ This site allows the owner of a hair salon to access information on their stylis
 * Navigate to directory `HairSalon.Solution` in your terminal.
 * Import database `will_greenberg.sql` in mySQLWorkbench, which is accessible [here](https://dev.mysql.com/downloads/workbench/).
 * Once the database is imported, add an `appsettings.json` file to the directory `HairSalon`.
-* Add the following code to the `appsettings.json` file, with your password in the appropriate location
+* Add the following code to the `appsettings.json` file, with your password in the appropriate location:
   ```
   {
     "ConnectionStrings": {
