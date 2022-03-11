@@ -9,8 +9,14 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-
+  @Html.TextBoxFor(model => model.Name, new {required = "required"})
+  <br>
+  @Html.LabelFor(model => model.Specialty)
+  @Html.TextBoxFor(model => model.Specialty, new {required = "required"})
+  <br>
+  @Html.LabelFor(model => model.Schedule)
+  @Html.TextBoxFor(model => model.Schedule, new {required = "required"})
+  <br>
   <input type="submit" value="Add new Stylist" class="btn btn-primary">
 }
 
