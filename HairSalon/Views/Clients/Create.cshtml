@@ -9,10 +9,16 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new {required = "required"})
   <br>
   @Html.LabelFor(model => model.Hairstyle)
-  @Html.TextBoxFor(model => model.Hairstyle)
+  @Html.TextBoxFor(model => model.Hairstyle, new {required = "required"})
+  <br>
+  @Html.LabelFor(model => model.Time)
+  @Html.TextBoxFor(model => model.Time, new {@type="time", required = "required"} )
+  <br>
+  @Html.LabelFor(model => model.Date)
+  @Html.TextBoxFor(model => model.Date, new {@type="date", required = "required"} )
   <br>
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
