@@ -22,7 +22,7 @@ This MVC web application allows the owner of a hair salon to access information 
 
 * Clone this repository to your desktop.
 * Navigate to directory `HairSalon.Solution` in your terminal.
-* Import database `will_greenberg.sql` from this repository into mySQLWorkbench, which is accessible [here](https://dev.mysql.com/downloads/workbench/).
+* Import database `will_greenberg.sql` from this repository into mySQLWorkbench, which is accessible [here](https://dev.mysql.com/downloads/workbench/). In the Navigator > Administration window, select Data Import/Restore. In Import Options select Import from Self-Contained File. Navigate to `will_greenberg.sql`. Under Default Schema to be Imported To, select the New button. Make the database name `will_greenberg`. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
 * Once the database is imported, add an `appsettings.json` file to the directory `HairSalon`.
 * Add the following code to the `appsettings.json` file, with your password in the appropriate location:
   ```
