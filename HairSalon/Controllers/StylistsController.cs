@@ -17,10 +17,12 @@ namespace HairSalon.Controllers
     public ActionResult Index()
     {
       List<Stylist> model = _db.Stylists.ToList();
+      ViewBag.PageTitle = "Stylists";
       return View(model);
     }
     public ActionResult Create()
     {
+      ViewBag.PageTitle = "Add Stylist";
       return View();
     }
     [HttpPost]
@@ -33,6 +35,7 @@ namespace HairSalon.Controllers
     public ActionResult Details(int id)
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(cuisine => cuisine.StylistId == id);
+      ViewBag.PageTitle = "Stylist Details";
       return View(thisStylist);
     }
   }

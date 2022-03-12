@@ -17,11 +17,13 @@ namespace HairSalon.Controllers
     public ActionResult Index()
     {
       List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
+      ViewBag.PageTitle = "Clients";
       return View(model);
     }
     public ActionResult Create()
     {
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+      ViewBag.PageTitle = "Add Client";
       return View();
     }
     [HttpPost]
