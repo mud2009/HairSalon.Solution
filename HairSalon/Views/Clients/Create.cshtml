@@ -5,25 +5,26 @@
 @model HairSalon.Models.Client;
 
 <h4>Add a new Client:</h4>
-
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name, new {required = "required"})
-  <br>
-  @Html.LabelFor(model => model.Hairstyle)
-  @Html.TextBoxFor(model => model.Hairstyle, new {required = "required"})
-  <br>
-  @Html.LabelFor(model => model.Time)
-  @Html.TextBoxFor(model => model.Time, new {@type="time", required = "required"} )
-  <br>
-  @Html.LabelFor(model => model.Date)
-  @Html.TextBoxFor(model => model.Date, new {@type="date", required = "required"} )
-  <br>
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-
-  <input type="submit" value="Add new Client" class="btn btn-primary">
-}
+<div class="form-group">
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new {@class= "form-control", placeholder = "Name", required = "required"})
+    <br>
+    @Html.LabelFor(model => model.Hairstyle)
+    @Html.TextBoxFor(model => model.Hairstyle, new {@class= "form-control", placeholder = "Hairstyle", required = "required"})
+    <br>
+    @Html.LabelFor(model => model.Time)
+    @Html.TextBoxFor(model => model.Time, new {@class= "form-control", @type="time", required = "required"} )
+    <br>
+    @Html.LabelFor(model => model.Date)
+    @Html.TextBoxFor(model => model.Date, new {@class= "form-control", @type="date", required = "required"} )
+    <br>
+    @Html.LabelFor(model => model.Stylist)
+    <br>
+    @Html.DropDownList("StylistId", ViewBag.StylistId, "Select Stylist", new { @class = "form-control"})
+    <input type="submit" value="Add new Client" class="btn btn-primary">
+  }
+</div>
 
 <p>@Html.ActionLink("Show all Clients", "Index")</p>
