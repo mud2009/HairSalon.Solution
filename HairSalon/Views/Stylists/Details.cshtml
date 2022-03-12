@@ -4,13 +4,13 @@
 @using HairSalon.Models
 @model HairSalon.Models.Stylist
 
-<h2>Stylist Details</h2>
+<h4>Stylist Details</h4>
 
-<h3>Stylist: @Html.DisplayFor(model => model.Name)</h3>
+<h5>Stylist: @Html.DisplayFor(model => model.Name)</h5>
 
 @foreach (Client client in Model.Clients)
 {
-  <p>@client.Name, Hairtyle: @client.Hairstyle, Stylist: @client.Stylist.Name, Appointment: @client.Time @client.Date</p>
+  <p>@client.Name, Hairtyle: @client.Hairstyle, Appointment: @client.Time @client.Date</p>
 }
 
 <p>@Html.ActionLink("Add new Stylist", "Create")</p>
